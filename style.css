@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ***************************************************************************************************************************************** */
+@import url(https://fonts.googleapis.com/css?family=VT323);
+
+:root {
+    --star-color-A: white;
+    --star-color-B: transparent;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: "VT323";
+    font-size: 2rem;
+    background: linear-gradient(0deg,
+            rgb(25, 25, 112),
+            rgb(33, 20, 0) 30%),
+        rgb(0, 0, 0) 80%;
+}
+
+.lable {
+    color: white;
+    display: inline-block;
+    text-align: center;
+}
+
+.slider {
+    display: block;
+}
+
+.circle {
+    position: absolute;
+    /*width: 10px;
+  height: 10px;
+  left: 100px;
+  top: 20px; */
+    background-color: var(--star-color-A);
+    border-radius: 50%;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /*animation-direction: alternate;*/
+}
+
+.blink_1 {
+    animation-name: blink10;
+}
+
+.blink_2 {
+    animation-name: blink20;
+}
+
+.blink_3 {
+    animation-name: blink30;
+}
+
+.blink_4 {
+    animation-name: blink40;
+}
+
+.blink_5 {
+    animation-name: blink50;
+}
+
+@keyframes blink10 {
+
+    0%,
+    100% {
+        background-color: var(--star-color-A);
+    }
+
+    20% {
+        background-color: var(--star-color-B);
+    }
+}
+
+@keyframes blink20 {
+
+    0%,
+    100% {
+        background-color: var(--star-color-B);
+    }
+
+    40% {
+        background-color: var(--star-color-A);
+    }
+}
+
+@keyframes blink50 {
+
+    0%,
+    100% {
+        background-color: var(--star-color-A);
+    }
+
+    50% {
+        background-color: var(--star-color-B);
+    }
+}
+
+@keyframes blink30 {
+
+    0%,
+    100% {
+        background-color: var(--star-color-A);
+    }
+
+    60% {
+        background-color: var(--star-color-B);
+    }
+}
+
+@keyframes blink40 {
+
+    0%,
+    100% {
+        background-color: var(--star-color-B);
+    }
+
+    80% {
+        background-color: var(--star-color-A);
+    }
+}
+
+
+
+/* ***************************************************************************************************************************************** */
+
+.parent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+
+#sun {
+    border-radius: 100%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    box-shadow: 0 0 80px rgb(255 255 255 / 5%);
+    width: 200px;
+    transition: 1s linear all;
+    animation: moon_anim 2000s infinite;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+#moon {
+    border-radius: 100%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    box-shadow: 0 0 80px rgb(255 255 255 / 60%);
+    width: 200px;
+    transition: 1s linear all;
+    animation: moon_anim 200s infinite;
+    animation-timing-function: linear;
+}
+
+.clockBackground {
+    background-size: cover;
+    font-family: "helvetica neue";
+    text-align: center;
+    font-size: 10px;
+
+
+
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20px solid #ccc;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.clock-face {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hand {
+    height: 6px;
+    width: 50%;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform-origin: 100%;
+    /* relative to the parent */
+    transform: rotate(90deg);
+    border-radius: 8px;
+
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.second-hand {
+    height: 1px;
+}
+
+.min-hand {
+    height: 4px;
+    width: 40%;
+}
+
+.hour-hand {
+    width: 35%;
+}
+
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 2rem;
+
+}
+
+.clock .number1 {
+    --rotation: 30deg
+}
+
+.clock .number2 {
+    --rotation: 60deg
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg
+}
+
+.clock .number5 {
+    --rotation: 150deg
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: -150deg
+}
+
+.clock .number8 {
+    --rotation: -120deg
+}
+
+.clock .number9 {
+    --rotation: -90deg
+}
+
+.clock .number10 {
+    --rotation: -60deg
+}
+
+.clock .number11 {
+    --rotation: -30deg
+}
+
+#typeText {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+}
