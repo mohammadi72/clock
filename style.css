@@ -26,6 +26,8 @@ body {
             rgb(25, 25, 112),
             rgb(33, 20, 0) 30%),
         rgb(0, 0, 0) 80%;
+    overflow: hidden;
+
 }
 
 .lable {
