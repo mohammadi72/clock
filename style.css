@@ -294,4 +294,5 @@ body {
     color: white;
     font-size: 2rem;
     font-family: 'Lato', sans-serif;
+    z-index: 5;
 }
